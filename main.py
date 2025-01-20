@@ -312,14 +312,14 @@ def record_sale():
     print("3. Create a new user and buy for them")
     choice = input("Enter your choice: ").strip()
 
-    if choice == "1":  # Buy for the current user
+    if choice == "1": 
         if not current_user:
             print("You must be registered to buy for yourself!")
             input("\nPress Enter to return to the main menu...")
             return
         buyer = current_user
 
-    elif choice == "2":  # Buy for an existing user
+    elif choice == "2": 
         user_id = input("Enter the existing User ID: ").strip()
         buyer = user_manager.find_user_by_id(user_id)
         if not buyer:
@@ -327,7 +327,7 @@ def record_sale():
             input("\nPress Enter to return to the main menu...")
             return
 
-    elif choice == "3":  # Create a new user and buy for them
+    elif choice == "3": 
         user_id = input("Enter new User ID: ").strip()
         name = input("Enter new User Name: ").strip()
         address = input("Enter new User Address: ").strip()
